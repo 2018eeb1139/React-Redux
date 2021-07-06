@@ -24,7 +24,8 @@ export const fetchUserFailure=(error)=>{
 export const fetchUsers=()=>{
     return (dispatch)=>{
         dispatch(fetchUserRequest)
-        axios.get('https://jsonplaceholder.typicode.com/users')
+        // axios.get('https://jsonplaceholder.typicode.com/users')
+        axios.get('https://www.breakingbadapi.com/api/characters')
         .then(res=>{
             const users=res.data
             dispatch(fetchUserSuccess(users))
